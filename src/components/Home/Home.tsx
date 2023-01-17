@@ -88,10 +88,12 @@ export const Home: React.FC = () => {
 
         {loading && <Loading />}
         {error && <Error error={error} />}
+
         <Typography variant="subtitle1" sx={{ fontWeight: "600" }}>
           Results:{" "}
           {query === undefined ? news?.articles.length : newData.length}
         </Typography>
+        
         <Grid container spacing={3} my={1}>
           {query === undefined
             ? news?.articles.map((item, index) => (
