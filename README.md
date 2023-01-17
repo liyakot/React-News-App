@@ -4,7 +4,7 @@
 </h2>
 
 <h3 align="center">
-    <a href="https://netflix-redesignnn.netlify.app/" target="_blank">Life Demo</a>
+    <a href="https://btc-news.netlify.app/" target="_blank">Life Demo</a>
 </h3>
 
 
