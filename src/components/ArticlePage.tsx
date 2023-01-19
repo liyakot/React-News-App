@@ -25,18 +25,19 @@ const ArticlePage: React.FC = () => {
         sx={{
           height: 500,
           width: "100%",
-          maxHeight: { xs: 250, sm: 350, md: 500 },
+          maxHeight: { xs: 200, sm: 300, md: 400 }
         }}
         alt={articleData?.title}
         src={articleData?.imageUrl}
       />
       <Box
         sx={{
-          margin: "2rem",
+          margin: { md: '4rem', xs: '1rem'},
           position: "absolute",
-          top: { xs: 180, sm: 250, md: 400 },
+          top: { xs: 130, sm: 200, md: 250 },
           backgroundColor: "white",
-          p: "3rem",
+          p: {md:"2rem 4rem", xs: '1rem 1.5rem'},
+          width: {sm: '90%', md: '80%'},
           borderRadius: "10px",
         }}
       >

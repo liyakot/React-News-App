@@ -16,11 +16,6 @@ The project was created using React, TypeScript and Material UI.
 <p><img src="https://img.shields.io/github/languages/top/liyakot/React-News-App?color=red"></p>
 
 
-### Additionally
-___
-
-I've learned myself web development without any courses or training, so if you have any comments, I will be happy to chat with you on social networks (see  my <a href="https://github.com/liyakot">profile</a> :fire:)
-
 ### Getting Started  
 ___
 
@@ -70,3 +65,8 @@ To use Material UI In the project directory, you can run you should run:
 To install and save in your package.json dependencies, run the command below using npm:
 
 #### `npm install @mui/icons-material`
+
+### Additionally
+___
+
+I've learned myself web development without any courses or training, so if you have any comments, I will be happy to chat with you on social networks (see  my <a href="https://github.com/liyakot">profile</a> :fire:)

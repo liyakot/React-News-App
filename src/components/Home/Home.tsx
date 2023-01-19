@@ -2,7 +2,7 @@ import useNews from "../../hooks/news";
 import Loading from "./Loading";
 import Error from "./Error";
 import { Article } from "./Article";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IArticle } from "../../models";
 import {
   TextField,
@@ -16,7 +16,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 export const Home: React.FC = () => {
   const { error, news, loading } = useNews();
-  const [query, setQuery] = useState<any>();
+  const [query, setQuery] = useState<any>('');
   const [newData, setNewData] = useState<IArticle[]>([]);
   const [queryArray, setQueryArray] = useState<string[]>([]);
 
@@ -57,11 +57,12 @@ export const Home: React.FC = () => {
 
   return (
     <>
-      <Container sx={{ mt: "2rem" }}>
+      <Container sx={{ padding: {xs: '2rem', md: '2rem'} }}>
         <Box>
           <Typography variant="subtitle1" sx={{ fontWeight: "600" }}>
             Filter by keywords
           </Typography>
+          
           <TextField
             type="search"
             placeholder="I'm searching for..."
@@ -91,11 +92,11 @@ export const Home: React.FC = () => {
 
         <Typography variant="subtitle1" sx={{ fontWeight: "600" }}>
           Results:{" "}
-          {query === undefined ? news?.length : newData.length}
+          {query === '' ? news?.length : newData.length}
         </Typography>
         
         <Grid container spacing={3} my={1}>
-          {query === undefined
+          {query === ''
             ? news?.map((item) => (
                 <Article key={item.id} data={item} index={item.id} />
               ))
