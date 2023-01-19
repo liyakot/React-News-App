@@ -10,7 +10,7 @@
 
 ### Description
 ___
-It is a Single Page Application with React. Using the API, 100 news about Bitcoin are displayed on the page. You can filter them by keywords and go to the page of each news item to read more.
+It is a Single Page Application with React. Using the API, 100 news about Space are displayed on the page. You can filter them by keywords and go to the page of each news item to read more.
 
 The project was created using React, TypeScript and Material UI. 
 <p><img src="https://img.shields.io/github/languages/top/liyakot/React-News-App?color=red"></p>
