@@ -3,7 +3,7 @@ import Loading from "./Loading";
 import Error from "./Error";
 import { Article } from "./Article";
 import { useState } from "react";
-import { IArticleCard } from "../../models";
+import { IArticle } from "../../models";
 import {
   TextField,
   Container,
@@ -17,17 +17,17 @@ import SearchIcon from "@mui/icons-material/Search";
 export const Home: React.FC = () => {
   const { error, news, loading } = useNews();
   const [query, setQuery] = useState<any>();
-  const [newData, setNewData] = useState<IArticleCard[]>([]);
+  const [newData, setNewData] = useState<IArticle[]>([]);
   const [queryArray, setQueryArray] = useState<string[]>([]);
 
   function searchNews() {
     setQueryArray(query?.toLowerCase().match(/\S+/g));
 
-    let newArray: IArticleCard[] | any = [];
+    let newArray: IArticle[] | any = [];
 
     if (queryArray !== undefined) {
       queryArray.forEach((element) => {
-        news?.articles.forEach((item) => {
+        news?.forEach((item) => {
           if (
             element.includes(" ") === false &&
             item.title.toLowerCase().includes(element) &&
@@ -41,10 +41,10 @@ export const Home: React.FC = () => {
 
     if (queryArray !== undefined) {
       queryArray.forEach((element) => {
-        news?.articles.forEach((item) => {
+        news?.forEach((item) => {
           if (
             element.includes(" ") === false &&
-            item.description.toLowerCase().includes(element) &&
+            item.summary.toLowerCase().includes(element) &&
             newArray.indexOf(item) === -1
           ) {
             newArray.push(item);
@@ -91,16 +91,16 @@ export const Home: React.FC = () => {
 
         <Typography variant="subtitle1" sx={{ fontWeight: "600" }}>
           Results:{" "}
-          {query === undefined ? news?.articles.length : newData.length}
+          {query === undefined ? news?.length : newData.length}
         </Typography>
         
         <Grid container spacing={3} my={1}>
           {query === undefined
-            ? news?.articles.map((item, index) => (
-                <Article key={index} data={item} index={index} />
+            ? news?.map((item) => (
+                <Article key={item.id} data={item} index={item.id} />
               ))
             : newData.map((item, index) => (
-                <Article key={index} data={item} index={index} />
+                <Article key={item.id} data={item} index={item.id} />
               ))}
         </Grid>
       </Container>

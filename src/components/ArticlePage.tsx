@@ -13,7 +13,7 @@ const ArticlePage: React.FC = () => {
   const { error, news, loading } = useNews();
   const { id } = useParams<ArticlePageParams>();
   const index = Number(id);
-  const articleData = news?.articles[index];
+  const articleData = news.find((item) => item.id === index);
   const navigate = useNavigate();
 
   return (
@@ -28,7 +28,7 @@ const ArticlePage: React.FC = () => {
           maxHeight: { xs: 250, sm: 350, md: 500 },
         }}
         alt={articleData?.title}
-        src={articleData?.urlToImage}
+        src={articleData?.imageUrl}
       />
       <Box
         sx={{
@@ -46,7 +46,7 @@ const ArticlePage: React.FC = () => {
         >
           {articleData?.title}{" "}
         </Typography>
-        <Typography variant="body1">{articleData?.content}</Typography>
+        <Typography variant="body1">{articleData?.summary}</Typography>
         <Typography
           variant="subtitle1"
           sx={{ marginTop: "1rem", fontWeight: "600" }}

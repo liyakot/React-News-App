@@ -1,32 +1,23 @@
 export interface IArticle {
-  articles: [
+  id: number;
+  title: string;
+  url: string;
+  imageUrl: string;
+  newsSite: string;
+  summary: string;
+  publishedAt: string;
+  updatedAt: string;
+  featured: boolean;
+  launches: [
     {
-      source: {
-        id?: string;
-        name: string;
-      };
-
-      author?: string;
-      title: string;
-      description: string;
-      url: string;
-      urlToImage: string;
-      publishedAt: string;
-      content: string;
+      id: string;
+      provider: string;
     }
   ];
-}
-
-export interface IArticleCard {
-  source: {
-    id?: string;
-    name: string;
-  };
-  author?: string;
-  title: string;
-  description: string;
-  url: string;
-  urlToImage: string;
-  publishedAt: string;
-  content: string;
+  events: [
+    {
+      id: string;
+      provider: string;
+    }
+  ];
 }

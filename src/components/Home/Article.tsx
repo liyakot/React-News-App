@@ -18,7 +18,7 @@ export const Article = ({ data, index }: any & IArticle) => {
       <Card sx={{ maxWidth: 500, height: 365, m: "0 auto" }}>
         <CardMedia
           sx={{ height: 140 }}
-          image={data.urlToImage}
+          image={data.imageUrl}
           title={data.title}
         />
         <CardContent sx={{ paddingTop: "0.5rem" }}>
@@ -46,7 +46,7 @@ export const Article = ({ data, index }: any & IArticle) => {
             variant="body2"
             sx={{ overflow: "hidden", height: "2.5rem" }}
           >
-            {data.description}
+            {data.summary}
           </Typography>
         </CardContent>
 
