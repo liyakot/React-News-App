@@ -1,25 +1,28 @@
 <h1 align="center">React News App</h1>
 <h2 align="center">
-<img src="/public/README.png">
+<img src="/public/README_img.png">
 </h2>
 
 <h3 align="center">
     <a href="https://btc-news.netlify.app/" target="_blank">Life Demo</a>
 </h3>
 
-
 ### Description
-___
+
+---
+
 It is a Single Page Application with React. Using the API, 100 news about Space are displayed on the page. You can filter them by keywords and go to the page of each news item to read more.
 
-The project was created using React, TypeScript and Material UI. 
+The project was created using React, TypeScript and Material UI.
+
 <p><img src="https://img.shields.io/github/languages/top/liyakot/React-News-App?color=red"></p>
 
+### Getting Started
 
-### Getting Started  
-___
+---
 
 ### Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 #### Available Scripts
@@ -58,6 +61,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ### Add Material UI
 
 To use Material UI In the project directory, you can run you should run:
+
 #### `npm install @mui/material @emotion/react @emotion/styled`
 
 ### Icons
@@ -67,6 +71,7 @@ To install and save in your package.json dependencies, run the command below usi
 #### `npm install @mui/icons-material`
 
 ### Additionally
-___
 
-I've learned myself web development without any courses or training, so if you have any comments, I will be happy to chat with you on social networks (see  my <a href="https://github.com/liyakot">profile</a> :fire:)
+---
+
+I've learned myself web development without any courses or training, so if you have any comments, I will be happy to chat with you on social networks (see my <a href="https://github.com/liyakot">profile</a> :fire:)
