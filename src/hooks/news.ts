@@ -15,15 +15,19 @@ const useNews = () => {
     try {
       setError("");
       setLoading(true);
-      const response = await axios.get<IArticle[]>(
-        "https://api.spaceflightnewsapi.net/v3/articles?_limit=100"
+      const response = await axios.get<{ results: IArticle[] }>(
+        "https://api.spaceflightnewsapi.net/v4/articles/?_limit=100"
       );
-      setNews(response.data);
-
+      console.log(response.data);
+      setNews(response.data.results); // Access the results property of the response
       setLoading(false);
     } catch (e: unknown) {
       setLoading(false);
-      setError((e as AxiosError).message);
+      if (e instanceof AxiosError) {
+        setError(e.message);
+      } else {
+        setError("An unexpected error occurred");
+      }
     }
   }
 
